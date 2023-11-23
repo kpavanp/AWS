@@ -2,8 +2,10 @@
 sudo su
 yum update -y
 yum install git -y
-yum install java-11 -y
+yum install java-17 -y
 yum install docker -y
 systemctl start docker
 systemctl enable docker
 docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+docker exec -it container code /bin/bash
+
